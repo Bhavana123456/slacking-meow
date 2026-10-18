@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Slack Cats",
+  "version": "1.0",
+  "description": "A pomodoro timer that unleashes meowing cats when you wander off to a distracting site.",
+  "permissions": ["storage"],
+  "action": { "default_popup": "popup.html", "default_title": "Slack Cats" },
+  "icons": { "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    { "matches": ["<all_urls>"], "js": ["shared.js", "content.js"], "run_at": "document_idle" }
+  ]
+}
